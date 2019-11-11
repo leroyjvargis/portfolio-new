@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leroy Jacob Vargis!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600,700&amp;display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> --> <b>Leroy Jacob Vargis</b>
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#home">
+              Home
+            </a>
+      
+            <a class="navbar-item" href="#projects">
+              Projects
+            </a>
+      
+            <a class="navbar-item" href="#exp">
+              Experience
+            </a>
+            
+            <a class="navbar-item" href="#blog">
+              Blog
+            </a>
+    
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="mailto:mail@leroy.co.in">
+                <strong>Contact Me!</strong>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  <!-- <section class="section">
+    <div class="container main-salut">
+      <h1 class="title salut">
+        Hello, I'm Leroy :)
+      </h1>
+      <p class="subtitle">
+        I'm a full stack web developer with a focus on cloud technologies from Phoenix, AZ. <br>Go <b>Sun Devils!</b>
+      </p>
+    </div>
+  </section> -->
+
+  <section class="hero is-primary is-bold main-salut" id="home">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title salut">
+            Hello, I'm Leroy :)
+        </h1>
+        <h2 class="subtitle">
+            I'm a full stack web developer with a focus on cloud technologies from Phoenix, AZ. <br>Go <b>Sun Devils!</b>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section main-section" id="projects">
+    <div class="container">
+      <h3 class="section-heading">
+        Projects
+      </h3>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-7">
+          <div class="tile">
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-warning">
+                <p class="title">Adseekr</p>
+                <p class="subtitle"><a target="_blank" href="https://adseekr.leroyjv.dev/">Website</a> <span style="float:right"><a target="_blank" href="https://github.com/leroyjvargis/adseekr-ui">Repo</a></span></p>
+                <p class="content">Full stack, cloud-native development of a platform to search for historical ads. A serverless microservice architecture for the backend with an Angular UI, fully deployed on AWS. REST API developed using API Gateway + Lambda + DynamoDB, Cognito for user authentication, S3 for website hosting. </p>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title">Team Up</p>
+              <p class="subtitle"><a target="_blank" href="https://github.com/leroyjvargis/teamUp-CSE546">Repo</a></p>
+              <p class="content">Cross platform mobile app to team up with likeminded people nearby for games, events, anything. Built on React-Native, with server on Python-Flask hosted on Google App Engine with Google Datastore DB of GCP. </p>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <p class="title">Cloud Autoscaler</p>
+            <p class="subtitle"><a target="_blank" href="https://github.com/leroyjvargis/cloud-autoscaler">Repo</a></p>
+            <div class="content">
+              <p>Implemented auto-scaling of EC2 instances without using in-built AutoScaler in AWS using AWS services. Architecture includes a master EC2 instance listening for object detection in video requests, with the capability to spin up child instances as load increases. Utilized SQS to manage requests and keep track, S3 for input and output. Web server written in NodeJS and autoscale logic as a Python daemon process in master.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="tile">
+        <article class="tile is-child notification is-danger">
+          <div class="content">
+            <p class="title">Gesture Recognition Android App</p>
+            <!-- <p class="subtitle">With even more content</p> -->
+            <div class="content">
+              <p>Android app to choose & preview among top 20 signs of American Sign Language, record user performed ASL sign and upload to cloud server where it performs gesture recognition to identify the performed sign. Native Android app, cloud server using TensorFlow to recognise gesture.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="exp">
+    <div class="container">
+      <h3 class="section-heading">
+        Experience
+      </h3>
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Graduate Services Assistant (Software Architect)</strong> <br>
+                    <small><a href="http://ilpil.asu.edu/cat/research/ffar-projects/" target="_blank">Arizona State University</a></small> 
+                    <small style="float:right;">Aug 2019 - Present</small>
+                    <br>
+                    <ul>
+                      <li>Develop the architecture & infrastructure for a cloud platform to connect small growers to the supply chain.</li>
+                      <li>Develop pipelines for data collection & pre-processing from different data sources.</li>
+                      <li>Develop infrastucture to mount complex optimization models online working on large amounts of data.</li>
+                    </ul>
+                    
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Front-end Engineering Intern</strong> <br>
+                    <small><a href="https://www.cyr3con.ai/" target="_blank">Cyr3con Cyber Reconnaissance, Inc.</a></small> 
+                    <small style="float:right;">May 2019 - Aug 2019</small>
+                    <br>
+                    <ul>
+                      <li>Responsible for developing features and maintaining an Angular-based web app.</li>
+                      <li>Revamped role-based access control boosting security, implementing state management using observables.</li>
+                      <li>Upgraded to latest versions of tech stack improving performance.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Software Development Engineer</strong> <br>
+                    <small><a href="http://spektrasystems.com/" target="_blank">Spektra Systems LLC</a></small> 
+                    <small style="float:right;">Jun 2016 - Jul 2018</small>
+                    <br>
+                    <ul>
+                      <li>Full-stack development with ASP .NET MVC C# REST API (deployed on Azure Web App), web portal with dashboard & reports (AngularJS), batch processing (Azure WebJobs, Functions, Storage Queues), with Azure SQL Server DB.</li>
+                      <li>Adapted product to manage cloud sandbox environment in AWS in addition to Azure, increasing adoption by customers.</li>
+                      <li>Researching and design of various core components including feedback management system, system for queuing of simultaneous jobs, integration with payment gateway, analytical reports, end to end testing, among others.</li>
+                      <li>Followed best practices in SDLC principles with agile methodology and git version control.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="buttons is-centered">
+          <button class="button is-primary is-large" onclick="window.open('https://s3-us-west-1.amazonaws.com/leroyjv.dev/Resume+-+Leroy.pdf', '_self')">Resume</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section main-section" id="blog">
+    <div class="container">
+      <h3 class="section-heading">
+        Blog
+      </h3>
+      <div class="columns">
+        <div class="column">
+          <div class="card blog-prv" onclick="window.open('blogs/adseekr-architecture.html', '_self')">
+            <div class="card-image">
+              <figure class="image">
+                <img src="img/adseekr-architecture.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Building AdSeekr</p>
+                  <p class="subtitle is-6">@lerojv</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                How I went about building AdSeekr, from architecture design to cloud deployment.
+                <a href="#">#product_design</a> <a href="#">#architecture</a>
+                <br>
+                <time datetime="2019-11-07">Nov 7, 2019</time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "columns">
+        <div class="column">
+          <div class="card blog-prv" onclick="window.open('blogs/action-ml-hackathon.html', '_self')">
+            <div class="card-image">
+              <!-- <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure> -->
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Action.ML Hackathon</p>
+                  <p class="subtitle is-6">@leroyjv</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                A few quick thoughts on the Action.ML Hackathon organized by Fox and hosted by ASU.
+                <a href="#">#ml</a> <a href="#">#deep_learning</a>
+                <br>
+                <time datetime="2016-1-1">Nov 3, 2019</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card blog-prv" onclick="window.open('blogs/push-notifications-azure.html', '_self')">
+              <div class="card-image">
+                <!-- <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure> -->
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">Push Notifications with Azure</p>
+                    <p class="subtitle is-6">@leroyjv</p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  Setting up push notifications via Azure Notification Hub for Ionic-Cordova apps.
+                  <a href="#">#push_notifications</a> <a href="#">#azure</a>
+                  <br>
+                  <time datetime="2016-1-1">Mar 25, 2017</time>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class = "columns">
+          <div class="column">
+            <div class="card blog-prv" onclick="window.open('blogs/angular-denver.html', '_self')">
+              <div class="card-image">
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">My experience at Angular Denver</p>
+                    <p class="subtitle is-6">@leroyjv</p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  What I learned at Angular Denver over the two days, from RxJS to ML with TensorFlow!
+                  <a href="#">#angular</a> <a href="#">#conference</a>
+                  <br>
+                  <time datetime="2016-1-1">Aug 7, 2019</time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <div class="footer-icons">
+        <a target="_blank" href="https://github.com/leroyjvargis"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://twitter.com/leroyjv"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/leroyjv/"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

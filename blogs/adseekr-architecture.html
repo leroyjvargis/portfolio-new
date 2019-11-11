@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Leroy Jacob Vargis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600,700&amp;display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> --> <b>Leroy Jacob Vargis</b>
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="../index.html#home">
+            Home
+          </a>
+    
+          <a class="navbar-item" href="../index.html#projects">
+            Projects
+          </a>
+    
+          <a class="navbar-item" href="../index.html#exp">
+            Experience
+          </a>
+          
+          <a class="navbar-item" href="../index.html#blog">
+            Blog
+          </a>
+    
+    
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="mailto:mail@leroy.co.in">
+                <strong>Contact Me!</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Blog - Leroy Jacob Vargis</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+      <!-- START ARTICLE FEED -->
+      <section class="articles">
+        <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+          <div class="card article">
+            <div class="card-content">
+              <div class="media">
+                  <div class="media-content has-text-centered">
+                      <p class="title article-title">AdSeekr Architecture </p>
+                      <div class="tags has-addons level-item">
+                          <span class="tag is-rounded is-info">@leroyjv</span>
+                          <span class="tag is-rounded">Nov 7, 2019</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="content article-body">
+                <p>
+                  <a href="https://adseekr.leroyjv.dev/auth/login", target="_blank">AdSeekr</a> is a platform for historical ad search, giving a unique perspective into what works in the marketing world. This is a brainchild of <a href="https://twitter.com/alinacbenny", target="_blank">@alinacbenny</a> and <a href="https://twitter.com/Aswin_7", target="_blank">@aswin_7</a>, so shoutout to them first!
+                </p>
+                <p>
+                  This project gave me a rare opportunity to build a product from scratch with the goal of being fast and reliable without the need for a heavy backend. The core data was served from an external API, and AdSeekr served as an access point to this data along with user management, authentication, etc. The requirements of the app were simple enough, and as such I decided this was a good opportunity for utilizing two services I had been eyeing for a while: the Nebular Angular library and the Serverless Application Framework.
+                </p> 
+                <h3>Architecture:</h3>
+                <p>
+                  Choosing Angular for the frontend was easy, especially since I wanted to try out <a href="https://akveo.github.io/nebular/" target="_blank">Nebular</a>, an Angular library with powerful components based on the Eva design system and in-built Auth & Security management. Angular 8 is now a stable release as well, so it was perfect for a production-ready website consuming a REST API.
+                </p>
+                <p>
+                  The serverless application framework was what excited me the most, since it allows the development of a fully-functional REST API utilizing cloud services without provisioning any dedicated resources. Choosing AWS was pretty straighforward as well, since it is the most famous and reliable among the available options. AWS provides a robust framework for the same, and I chose the following services for the system:
+                  <ul>
+                    <li>API Gateway for API endpoint management</li>
+                    <li>AWS Lambda for on-demand function execution</li>
+                    <li>Cognito for user auth & management</li>
+                    <li>S3 for static website hosting</li>
+                    <li>AWS CodePipeline for CI/CD</li>
+                  </ul>
+                </p>
+                <figure>
+                  <img src="../img/adseekr-architecture.png"/>
+                  <caption>AdSeekr architecture</caption>
+                </figure>
+                <p>
+                  API Gateway + Lambda is a much hyped solution to REST API development, but I feel it has not been embraced as much as advertised. The setup was relatively easy - route API Gateway traffic to Lambda as a proxy, configure Cognito as an authenticator (so every request is authenticated first before routed to Lambda, albeit at some runtime cost), and configure Lambda to return data in the specific format understood by the API Gateway. 
+                </p>
+                <h3>Obsevations:</h3>
+                <ol>
+                  <li>
+                      There is a cold-start problem when using AWS Lambdas with API Gateways which can negatively affect performance, however the system seems to works well for most cases. Turnaround time in the high 800 ms was the worst observed, but this is also affected by using Cognito.
+                  </li>
+                  <li>
+                      Cognito was surprisingly powerful, but the official AWS docs is lacking at worst and confusing at best. Setting up admin authentication flow for user creation & mgmt is ridiculously complicated requiring mutliple steps to be followed in a specific sequence, and I ended up using a separate wrapper (shoutout to <a href="https://github.com/capless/warrant", target="_blank">Warrant</a>) to make it easier. 
+                  </li>
+                  <li>
+                      S3 static website hosting is surprisingly easy, and setting up AWS CloudFront as the CDN with custom domain using Route53 was also pretty straightforward. The only delay was with configuring DNS servers at the domain service.
+                  </li>
+                  <li>
+                    CodePipeline was also set up for automatic build and deployment. The pipeline was setup in such a way that a build (a PROD build of Angular) is initiated whenever the master branch of the GitHub repository is updated, with the built files uploaded to S3 automatically. The process was efficient, smooth, and cheap as well. 
+                  </li>
+                </ol>
+                <h3>Final thoughts:</h3>
+                <p>AdSeekr is still a work in progress with a lot more features in the pipeline. Using AWS as the infrastructure was the right decision for quick turnaround and efficient deployment without much overhead. The API Gateway + Lambda architecture meant I can add new feature to the REST API without any dependency towards the existing codebase, and this works well in this case. Overall, this was a fun learning experience, and also shows just how easy it is to deploy a production-ready web application to the cloud nowadays with the advent of cloud technologies.</p>
+              </div>
+              <div>
+                  <span class="tag is-dark">Architecture</span>
+                  <span class="tag is-dark">Infrastructure</span>
+                  <span class="tag is-dark">AWS</span>
+                  <span class="tag is-dark">Angular</span>
+                  <span class="tag is-dark">API Gateway + Lambda</span>
+                  <span class="tag is-dark">REST API</span>
+              </div>
+            </div>
+          </div>
+          <!-- END ARTICLE -->
+        </div>
+      </section>
+      <!-- END ARTICLE FEED -->
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <div class="footer-icons">
+          <a target="_blank" href="https://github.com/leroyjvargis"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://twitter.com/leroyjv"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/leroyjv/"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

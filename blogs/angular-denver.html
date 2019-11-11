@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Leroy Jacob Vargis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600,700&amp;display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> --> <b>Leroy Jacob Vargis</b>
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="../index.html#home">
+            Home
+          </a>
+    
+          <a class="navbar-item" href="../index.html#projects">
+            Projects
+          </a>
+    
+          <a class="navbar-item" href="../index.html#exp">
+            Experience
+          </a>
+          
+          <a class="navbar-item" href="../index.html#blog">
+            Blog
+          </a>
+    
+    
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="mailto:mail@leroy.co.in">
+                <strong>Contact Me!</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Blog - Leroy Jacob Vargis</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+      <!-- START ARTICLE FEED -->
+      <section class="articles">
+        <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+          <div class="card article">
+            <div class="card-content">
+              <div class="media">
+                  <div class="media-content has-text-centered">
+                      <p class="title article-title">Angular Denver</p>
+                      <div class="tags has-addons level-item">
+                          <span class="tag is-rounded is-info">@leroyjv</span>
+                          <span class="tag is-rounded">Aug 7, 2019</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="content article-body">
+                <p>
+                  <a href="https://angulardenver.com/" target="_blank">Angular Denver</a> was a two-day conference targeted at Angular professionals, developers, and enthusiasts. Held at the beautiful city of Denver, this was a fun conference with a focus on a wide variety of topics and hands-on sessions, ranging from the depths of RxJS to the heights of ML with Tensorflow.js. I had a great time representing <a href="https://www.cyr3con.ai/" target="_blank">Cyr3con</a> along with my team lead, Anudeep.
+                </p>
+                <figure>
+                  <img src="../img/ang-dev.jpg"/>
+                </figure>
+                <p>
+                  What excited me the most when I first heard of the event was the opportunity to hear from the core maintainers of Angular. Angular is led by a small team of approx 25 core members, and a fair few were present at the event discusssing the latest advancements in Angular including development of version 9 and Ivy!
+                </p> 
+                <h3>Sessions</h3>
+                <p>
+                  The sessions that helped me the most were the ones on RxJS and State management, especially since I was tackling a problem requiring those at the time. The session "deep dive into RxJS Subjects" was especially helpful, since it helped cement my understanding and clear misconceptions I had been having, including when to use and the difference between Subjects, BehaviorSubjects, ReplaySubjects, and AsyncSubjects. I also learned the importance of proper cleanup after use, something that I hadn't given too much attention.
+                </p>
+                <p>
+                  Another helpful session was the one on Zone.js, which is something I've always wanted to use but never got around to. This session opened my eyes to the possibilities offered by Zone.js, especially its applications in testing, debugging and error handling.
+                </p>
+                <p>
+                  One of the most popular sessions was by 11-year old <a href="https://twitter.com/aaronhma" target="_blank">Aaron Ma</a>, a self-taught ML expert. His session on ML on Angular with Tensorflow.js was met with wide acclaim, and the session explained how and when browser-based ML can be applied. This was interesting, although practical applications may be few.
+                </p>
+                <p>
+                  Other sessions included one on security, human perception, ghost elements, ng Elements, and so on. Each of them was endearing on its own, and there was no one session that was underwhelming.
+                </p>
+
+                <h3>Thoughts on the conference:</h3>
+                <p>
+                  The entire conference was split into multiple sessions running parallelly, and the sessions were either 40min or 15min long. This meant the breadth of the entirety of knowledge being shared was large, compromising the depth of a particular topic. That works, IMO. The attendees of these conferences are there to expand their knowledge, not to learn about a particular thing from scratch to guru. It also allows us to pick and choose topics as per interest/need. So kudos to them.
+                </p>
+              </div>
+              <div>
+                  <span class="tag is-dark">Angular</span>
+                  <span class="tag is-dark">Conference</span>
+                  <span class="tag is-dark">Denver</span>
+                  <span class="tag is-dark">Subjects</span>
+                  <span class="tag is-dark">RxJS</span>
+              </div>
+            </div>
+          </div>
+          <!-- END ARTICLE -->
+        </div>
+      </section>
+      <!-- END ARTICLE FEED -->
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <div class="footer-icons">
+          <a target="_blank" href="https://github.com/leroyjvargis"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://twitter.com/leroyjv"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/leroyjv/"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
